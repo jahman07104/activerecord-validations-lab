@@ -15,9 +15,6 @@ class Post < ActiveRecord::Base
    if CLICKBAIT_PATTERNS.none?{|word| word.match title} 
     errors.add(:title,"must be clickbait")
    end
-    # unless value == /\b(Won't Believe|Secret|Top \d|Guess)\b/
-    #   record.errors[attribute] << "Title is not clickbaity enough"
-    # end
   end
 
 
